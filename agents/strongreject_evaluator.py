@@ -37,8 +37,10 @@ class StrongRejectEvaluator:
             self.client = OpenAI(api_key=api_key, base_url=base_url)
         elif api_key is None and base_url is None:
             # Default custom API settings
-            api_key = os.environ.get("CUSTOM_API_KEY", "sk-sgl-MH7bEVVJlBp3RT_P5cPQ6-KfC1qJElBRCfTDHy40Ue4")
-            base_url = os.environ.get("CUSTOM_BASE_URL", "http://5.78.122.79:10000/v1")
+            api_key = os.environ.get("CUSTOM_API_KEY")
+            base_url = os.environ.get("CUSTOM_BASE_URL")
+            if not api_key or not base_url:
+                raise ValueError("CUSTOM_API_KEY and CUSTOM_BASE_URL environment variables must be set.")
             self.client = OpenAI(api_key=api_key, base_url=base_url)
         else:
             # Standard OpenAI API fallback

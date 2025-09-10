@@ -39,8 +39,10 @@ class LightweightAgent:
             if self.provider == "openai" or self.provider == "custom":
                 # Custom API support
                 if self.provider == "custom":
-                    api_key = config.get("api_key") or os.getenv("CUSTOM_API_KEY", "sk-sgl-MH7bEVVJlBp3RT_P5cPQ6-KfC1qJElBRCfTDHy40Ue4")
-                    base_url = config.get("base_url") or os.getenv("CUSTOM_BASE_URL", "http://5.78.122.79:10000/v1")
+                    api_key = config.get("api_key") or os.getenv("CUSTOM_API_KEY")
+                    base_url = config.get("base_url") or os.getenv("CUSTOM_BASE_URL")
+                    if not api_key or not base_url:
+                        raise ValueError("API key and base URL required. Set CUSTOM_API_KEY and CUSTOM_BASE_URL environment variables.")
                     self.client = OpenAI(api_key=api_key, base_url=base_url)
                     self.mock_mode = False
                     logging.info(f"Custom API client initialized: {base_url} with model: {self.model}")

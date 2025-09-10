@@ -7,8 +7,8 @@ m2s_template_generator:
   temperature: 0.7
   max_retries: 3
   num_templates_per_iteration: 5
-  api_key: "sk-sgl-MH7bEVVJlBp3RT_P5cPQ6-KfC1qJElBRCfTDHy40Ue4"
-  base_url: "http://5.78.122.79:10000/v1"
+  api_key: "${CUSTOM_API_KEY}"  # Set via environment variable
+  base_url: "${CUSTOM_BASE_URL}"  # Set via environment variable
   
 # Target Model (Attack Target)
 target:
@@ -16,8 +16,8 @@ target:
   model: "openai/gpt-4.1"
   temperature: 0
   max_retries: 10
-  api_key: "sk-sgl-MH7bEVVJlBp3RT_P5cPQ6-KfC1qJElBRCfTDHy40Ue4"
-  base_url: "http://5.78.122.79:10000/v1"
+  api_key: "${CUSTOM_API_KEY}"  # Set via environment variable
+  base_url: "${CUSTOM_BASE_URL}"  # Set via environment variable
 
 # Evaluator (Attack Success Assessment)
 evaluation:
@@ -25,8 +25,8 @@ evaluation:
   use_strongreject: true
   judge_model: "openai/gpt-4.1"
   max_tokens_for_evaluation: 512
-  api_key: "sk-sgl-MH7bEVVJlBp3RT_P5cPQ6-KfC1qJElBRCfTDHy40Ue4"
-  base_url: "http://5.78.122.79:10000/v1"
+  api_key: "${CUSTOM_API_KEY}"  # Set via environment variable
+  base_url: "${CUSTOM_BASE_URL}"  # Set via environment variable
 
 # Experiment Settings
 experiment:
@@ -85,7 +85,12 @@ logging:
   save_to_file: true
   log_dir: "./logs"
 
-# API keys are set via environment variables
-# export OPENAI_API_KEY="your-key"
-# export ANTHROPIC_API_KEY="your-key"
-# export OPENROUTER_API_KEY="your-key"
+# Environment Variables Setup Instructions:
+# export CUSTOM_API_KEY="your-api-key-here"
+# export CUSTOM_BASE_URL="your-api-base-url-here"
+# 
+# For OpenAI:
+# export OPENAI_API_KEY="your-openai-key"
+# 
+# For Anthropic:
+# export ANTHROPIC_API_KEY="your-anthropic-key"
