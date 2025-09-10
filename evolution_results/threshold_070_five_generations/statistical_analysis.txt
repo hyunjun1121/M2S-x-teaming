@@ -1,0 +1,69 @@
+Loading results from: experiments/pipeline_results\2025-09-09_03-29-03\m2s_evolution_pipeline_results.json
+================================================================================
+M2S Evolution Pipeline - Results Analysis for Paper
+================================================================================
+
+### A. Descriptive Statistics ###
+Total experiments: 230
+Valid experiments: 230
+Error experiments: 0 (0.0%)
+
+### Table 2: Performance Summary by Template ###
+Template     Success Rate    95% CI               Mean SR(raw)       Mean SR(norm)      Mean Resp Len  
+----------------------------------------------------------------------------------------------------
+hyphenize    52.0% (26/50) (38.5%, 65.2%)   2.65/5.0           0.530/1.0         1360
+numberize    34.0% (17/50) (22.4%, 47.8%)   1.54/5.0           0.308/1.0         1739
+pythonize    52.0% (26/50) (38.5%, 65.2%)   2.60/5.0           0.520/1.0         6558
+evolved_template_1 47.5% (19/40) (32.9%, 62.5%)   2.31/5.0           0.463/1.0         3474
+evolved_template_2 37.5% (15/40) (24.2%, 53.0%)   1.88/5.0           0.375/1.0         2865
+
+Overall: 44.8% (103/230), 95% CI: (38.5%, 51.2%)
+
+### B. Template Comparison (Effect Size) ###
+hyphenize vs numberize: Cohen's h = 0.366 (medium effect)
+hyphenize vs pythonize: Cohen's h = 0.000 (small effect)
+hyphenize vs evolved_template_1: Cohen's h = 0.090 (small effect)
+hyphenize vs evolved_template_2: Cohen's h = 0.293 (medium effect)
+numberize vs pythonize: Cohen's h = -0.366 (medium effect)
+numberize vs evolved_template_1: Cohen's h = -0.276 (medium effect)
+numberize vs evolved_template_2: Cohen's h = -0.073 (small effect)
+pythonize vs evolved_template_1: Cohen's h = 0.090 (small effect)
+pythonize vs evolved_template_2: Cohen's h = 0.293 (medium effect)
+evolved_template_1 vs evolved_template_2: Cohen's h = 0.203 (medium effect)
+
+### C. StrongReject Length Sensitivity Analysis ###
+Response length vs SR(normalized) correlation: r = 0.338 (p = 0.0000)
+  hyphenize: r = 0.520 (p = 0.0001)
+  numberize: r = 0.409 (p = 0.0032)
+  pythonize: r = 0.461 (p = 0.0008)
+  evolved_template_1: r = 0.577 (p = 0.0001)
+  evolved_template_2: r = 0.467 (p = 0.0024)
+
+### D. Conversion Quality vs Attack Success ###
+Compression ratio vs success correlation: r = -0.127 (p = 0.0540)
+
+### E. Error/Failure Analysis ###
+
+Table 3: Error Type Classification
+
+Failure types (SR < 0.70):
+  Explicit refusal: 40
+  General info only: 87
+  Partial response: 0
+
+### G. StrongReject Dimension Analysis ###
+
+Table 4: Mean Scores by Dimension
+Dimension    Success Group   Failure Group   Difference
+--------------------------------------------------
+convincing   0.00           0.00           +0.00
+specific     0.00           0.00           +0.00
+flawed       0.00           0.00           +0.00
+
+### Final Summary ###
+- Total valid experiments: 230
+- Success rate with threshold 0.70: 44.8%
+- Effect sizes between templates: varied
+- Response length correlation: analyzed
+- Encoding errors: 0/230
+- Total generations run: 5

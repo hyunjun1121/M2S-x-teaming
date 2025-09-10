@@ -1,0 +1,6 @@
+Template,Claude-4-Sonnet,GPT-4.1,GPT-5,Gemini-2.5-Pro,Qwen3-235B
+evolved_template_1,0.51,0.67,0.0,0.0,0.65
+evolved_template_2,0.33,0.67,0.0,0.0,0.66
+hyphenize,0.5,0.6,0.0,0.0,0.63
+numberize,0.53,0.63,0.0,0.0,0.64
+pythonize,0.48,0.65,0.0,0.0,0.66

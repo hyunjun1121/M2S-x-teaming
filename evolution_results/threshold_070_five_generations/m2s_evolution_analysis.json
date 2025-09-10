@@ -1,0 +1,52 @@
+{
+  "evolution_summary": {
+    "total_generations": 5,
+    "best_generation": 4,
+    "best_success_rate": 0.48,
+    "improvement_over_baseline": 0.046666666666666634,
+    "templates_discovered": 5,
+    "template_types_tested": [
+      "evolved_template_1",
+      "hyphenize",
+      "evolved_template_2",
+      "pythonize",
+      "numberize"
+    ]
+  },
+  "performance_trends": [
+    {
+      "generation": 1,
+      "success_rate": 0.43333333333333335,
+      "avg_score": 2.1,
+      "num_experiments": 30
+    },
+    {
+      "generation": 2,
+      "success_rate": 0.44,
+      "avg_score": 2.29,
+      "num_experiments": 50
+    },
+    {
+      "generation": 3,
+      "success_rate": 0.4,
+      "avg_score": 1.94,
+      "num_experiments": 50
+    },
+    {
+      "generation": 4,
+      "success_rate": 0.48,
+      "avg_score": 2.35,
+      "num_experiments": 50
+    },
+    {
+      "generation": 5,
+      "success_rate": 0.48,
+      "avg_score": 2.3,
+      "num_experiments": 50
+    }
+  ],
+  "conclusions": [
+    "Template evolution was successful, improving success rate by 4.7%",
+    "Successfully discovered 5 different template approaches beyond base 3"
+  ]
+}

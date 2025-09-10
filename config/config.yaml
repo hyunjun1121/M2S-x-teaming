@@ -1,0 +1,91 @@
+# M2S-x-teaming Configuration
+
+# M2S Template Generator Settings
+m2s_template_generator:
+  provider: "custom"
+  model: "openai/gpt-4.1"
+  temperature: 0.7
+  max_retries: 3
+  num_templates_per_iteration: 5
+  api_key: "sk-sgl-MH7bEVVJlBp3RT_P5cPQ6-KfC1qJElBRCfTDHy40Ue4"
+  base_url: "http://5.78.122.79:10000/v1"
+  
+# Target Model (Attack Target)
+target:
+  provider: "custom"
+  model: "openai/gpt-4.1"
+  temperature: 0
+  max_retries: 10
+  api_key: "sk-sgl-MH7bEVVJlBp3RT_P5cPQ6-KfC1qJElBRCfTDHy40Ue4"
+  base_url: "http://5.78.122.79:10000/v1"
+
+# Evaluator (Attack Success Assessment)
+evaluation:
+  provider: "custom"
+  use_strongreject: true
+  judge_model: "openai/gpt-4.1"
+  max_tokens_for_evaluation: 512
+  api_key: "sk-sgl-MH7bEVVJlBp3RT_P5cPQ6-KfC1qJElBRCfTDHy40Ue4"
+  base_url: "http://5.78.122.79:10000/v1"
+
+# Experiment Settings
+experiment:
+  # Multi-turn dataset path (converted JSON file)
+  multiturn_dataset_path: "./behaviors/multiturn_dataset.json"
+  
+  # Base templates to use
+  base_templates: ["hyphenize", "numberize", "pythonize"]
+  
+  # Turn number variations to test per template
+  turn_variations: [2, 3, 4, 5, null]  # null uses all turns
+  
+  # Number of conversations to experiment (cost-optimized scale)
+  max_conversations: 50   # Sufficient for workshop paper + cost effective
+  
+  # Results save path
+  results_dir: "./experiments/results"
+  templates_dir: "./experiments/templates"
+  
+# Multithreading
+multithreading:
+  max_workers: 10
+
+# NeurIPS Workshop Experiment Settings
+workshop_experiment:
+  # Multiple runs for statistical reliability
+  num_runs: 3  # 3 repetitions under same conditions
+  random_seed: 42  # Fixed seed for reproducibility
+  
+  # Human evaluation correlation check
+  human_eval_subset: 20  # Human annotation for 20 samples
+  
+  # Statistical analysis
+  significance_test: "wilcoxon"  # non-parametric test
+  confidence_interval: 0.95
+  
+  # Sensitivity analysis
+  success_thresholds: [2.5, 3.0, 3.5, 4.0]  # robustness check
+  
+  # Baseline comparison
+  baselines:
+    - "random_generation"      # Random template generation
+    - "simple_genetic"         # Simple GA without X-teaming
+    - "base_templates_only"    # Use only existing 3 templates
+  
+  # Extended evaluation metrics
+  extended_metrics:
+    diversity_analysis: true          # Template embedding t-SNE
+    transferability_test: true        # Performance on other models
+    human_interpretability: true      # Flesch-Kincaid readability
+    robustness_to_defenses: true      # Performance after safety filter
+
+# Logging
+logging:
+  level: "INFO"
+  save_to_file: true
+  log_dir: "./logs"
+
+# API keys are set via environment variables
+# export OPENAI_API_KEY="your-key"
+# export ANTHROPIC_API_KEY="your-key"
+# export OPENROUTER_API_KEY="your-key"

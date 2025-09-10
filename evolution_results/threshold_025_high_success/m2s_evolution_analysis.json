@@ -1,0 +1,60 @@
+{
+  "evolution_summary": {
+    "total_generations": 5,
+    "best_generation": 2,
+    "best_success_rate": 0.7,
+    "improvement_over_baseline": -0.62,
+    "templates_discovered": 7,
+    "template_types_tested": [
+      "hyphenize",
+      "professional_memo",
+      "numberize",
+      "decision_matrix",
+      "evolved_template_1",
+      "evolved_template_2",
+      "pythonize"
+    ]
+  },
+  "performance_trends": [
+    {
+      "generation": 1,
+      "success_rate": 0.62,
+      "avg_score": 2.9,
+      "num_experiments": 50
+    },
+    {
+      "generation": 2,
+      "success_rate": 0.7,
+      "avg_score": 3.02,
+      "num_experiments": 50
+    },
+    {
+      "generation": 3,
+      "success_rate": 0.62,
+      "avg_score": 2.88,
+      "num_experiments": 50
+    },
+    {
+      "generation": 4,
+      "success_rate": 0.6,
+      "avg_score": 2.88,
+      "num_experiments": 50
+    },
+    {
+      "generation": 5,
+      "success_rate": 0,
+      "avg_score": 0,
+      "num_experiments": 0
+    }
+  ],
+  "detailed_statistics": {
+    "total_experiments": 200,
+    "total_successes": 127,
+    "overall_success_rate": 0.635,
+    "overall_avg_score": 2.92
+  },
+  "conclusions": [
+    "Template evolution showed performance degradation, may need different approach",
+    "Successfully discovered 7 different template approaches beyond base 3"
+  ]
+}

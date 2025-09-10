@@ -1,0 +1,194 @@
+{
+  "total_experiments": 2500,
+  "successful_experiments": 1500,
+  "timestamp": "2025-09-09T14:52:00.477126",
+  "template_statistics": {
+    "hyphenize": {
+      "total": 500,
+      "successes": 173,
+      "by_model": {
+        "GPT-4.1": {
+          "total": 100,
+          "successes": 60,
+          "success_rate": 0.6
+        },
+        "GPT-5": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Gemini-2.5-Pro": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Qwen3-235B": {
+          "total": 100,
+          "successes": 63,
+          "success_rate": 0.63
+        },
+        "Claude-4-Sonnet": {
+          "total": 100,
+          "successes": 50,
+          "success_rate": 0.5
+        }
+      },
+      "success_rate": 0.346
+    },
+    "numberize": {
+      "total": 500,
+      "successes": 180,
+      "by_model": {
+        "GPT-4.1": {
+          "total": 100,
+          "successes": 63,
+          "success_rate": 0.63
+        },
+        "GPT-5": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Gemini-2.5-Pro": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Qwen3-235B": {
+          "total": 100,
+          "successes": 64,
+          "success_rate": 0.64
+        },
+        "Claude-4-Sonnet": {
+          "total": 100,
+          "successes": 53,
+          "success_rate": 0.53
+        }
+      },
+      "success_rate": 0.36
+    },
+    "pythonize": {
+      "total": 500,
+      "successes": 179,
+      "by_model": {
+        "GPT-4.1": {
+          "total": 100,
+          "successes": 65,
+          "success_rate": 0.65
+        },
+        "GPT-5": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Gemini-2.5-Pro": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Qwen3-235B": {
+          "total": 100,
+          "successes": 66,
+          "success_rate": 0.66
+        },
+        "Claude-4-Sonnet": {
+          "total": 100,
+          "successes": 48,
+          "success_rate": 0.48
+        }
+      },
+      "success_rate": 0.358
+    },
+    "evolved_template_1": {
+      "total": 500,
+      "successes": 183,
+      "by_model": {
+        "GPT-4.1": {
+          "total": 100,
+          "successes": 67,
+          "success_rate": 0.67
+        },
+        "GPT-5": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Gemini-2.5-Pro": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Qwen3-235B": {
+          "total": 100,
+          "successes": 65,
+          "success_rate": 0.65
+        },
+        "Claude-4-Sonnet": {
+          "total": 100,
+          "successes": 51,
+          "success_rate": 0.51
+        }
+      },
+      "success_rate": 0.366
+    },
+    "evolved_template_2": {
+      "total": 500,
+      "successes": 166,
+      "by_model": {
+        "GPT-4.1": {
+          "total": 100,
+          "successes": 67,
+          "success_rate": 0.67
+        },
+        "GPT-5": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Gemini-2.5-Pro": {
+          "total": 100,
+          "successes": 0,
+          "success_rate": 0.0
+        },
+        "Qwen3-235B": {
+          "total": 100,
+          "successes": 66,
+          "success_rate": 0.66
+        },
+        "Claude-4-Sonnet": {
+          "total": 100,
+          "successes": 33,
+          "success_rate": 0.33
+        }
+      },
+      "success_rate": 0.332
+    }
+  },
+  "model_statistics": {
+    "GPT-4.1": {
+      "total": 500,
+      "successes": 322,
+      "success_rate": 0.644
+    },
+    "GPT-5": {
+      "total": 500,
+      "successes": 0,
+      "success_rate": 0.0
+    },
+    "Gemini-2.5-Pro": {
+      "total": 500,
+      "successes": 0,
+      "success_rate": 0.0
+    },
+    "Qwen3-235B": {
+      "total": 500,
+      "successes": 324,
+      "success_rate": 0.648
+    },
+    "Claude-4-Sonnet": {
+      "total": 500,
+      "successes": 235,
+      "success_rate": 0.47
+    }
+  }
+}
