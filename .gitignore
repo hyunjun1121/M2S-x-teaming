@@ -51,17 +51,11 @@ tmp/
 Thumbs.db
 *.DS_Store
 
-# Experimental data with potentially sensitive information
-# Keep only summary and analysis files
-evolution_results/*/m2s_evolution_pipeline_results.json
-evaluation_results/*/multi_model_results.json
-
 # API configuration backups
 config/*.yaml.bak
 config/*.yml.bak
 
-# Local experiment outputs
-experiments/
+# Local experiment outputs (keep published experimental results)
 local_experiments/
 test_outputs/
 
