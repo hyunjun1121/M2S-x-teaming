@@ -2,6 +2,9 @@
 
 > **Multi-turn to Single-turn Jailbreak Template Evolution using Evolutionary Algorithms**
 
+📄 **Paper**: [X-Teaming Evolutionary M2S: Automated Discovery of Multi-turn to Single-turn Jailbreak Templates](https://arxiv.org/abs/2509.08729)  
+🏷️ **arXiv**: 2509.08729 [cs.CL]
+
 This repository contains the complete implementation of our M2S (Multi-turn to Single-turn) template evolution pipeline, which uses evolutionary algorithms to automatically discover effective jailbreak templates that convert multi-turn conversations into single-turn attacks.
 
 ## 🎯 **Project Overview**
