@@ -303,12 +303,14 @@ For questions or issues:
 If you use this work in your research, please cite:
 
 ```bibtex
-@article{m2s_xteaming_2025,
-  title={M2S X-Teaming Evolution Pipeline: Automated Discovery of Multi-turn to Single-turn Jailbreak Templates},
-  author={[Author Names]},
-  journal={[Journal Name]},
-  year={2025},
-  note={Implementation available at: https://github.com/[username]/M2S-x-teaming-pipeline}
+@misc{kim2025xteamingevolutionarym2sautomated,
+      title={X-Teaming Evolutionary M2S: Automated Discovery of Multi-turn to Single-turn Jailbreak Templates}, 
+      author={Hyunjun Kim and Junwoo Ha and Sangyoon Yu and Haon Park},
+      year={2025},
+      eprint={2509.08729},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.08729}, 
 }
 ```
 
